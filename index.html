@@ -2039,7 +2039,7 @@
 
                 <div class="appointment-form-side">
                     <div class="appointment-success-msg" id="appointmentSuccessMsg">
-                        <i class="fa-solid fa-circle-check"></i> Thank you! Submitting your appointment details...
+                        <i class="fa-solid fa-circle-check"></i> Preparing your appointment details for WhatsApp...
                     </div>
 
                     <form id="appointmentForm" onsubmit="handleAppointmentSubmit(event)">
@@ -2104,7 +2104,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-green" style="width: 100%; justify-content: center; padding: 14px; font-size: 13px;">
-                            <i class="fa-solid fa-calendar-check"></i> Book Appointment Now
+                            Book Now
                         </button>
                     </form>
                 </div>
@@ -2415,15 +2415,47 @@
             }
         }
 
+        // WhatsApp Appointment Handler
         function handleAppointmentSubmit(e) {
             e.preventDefault();
+
+            // Retrieve form values
+            const name = document.getElementById('patientName').value.trim();
+            const phone = document.getElementById('patientPhone').value.trim();
+            const department = document.getElementById('departmentSelect').value;
+            const doctor = document.getElementById('doctorSelect').value;
+            const date = document.getElementById('appointmentDate').value;
+            const time = document.getElementById('appointmentTime').value;
+            const notes = document.getElementById('patientNotes').value.trim();
+
+            // Format nice text message for WhatsApp
+            const message = `🏥 *NEW APPOINTMENT BOOKING* 🏥\n\n` +
+                            `👤 *Patient Name:* ${name}\n` +
+                            `📞 *Phone Number:* ${phone}\n` +
+                            `🏨 *Department:* ${department}\n` +
+                            `👨‍⚕️ *Preferred Doctor:* ${doctor}\n` +
+                            `📅 *Date:* ${date}\n` +
+                            `⏰ *Time Slot:* ${time}\n` +
+                            (notes ? `📝 *Notes/Symptoms:* ${notes}\n\n` : `\n`) +
+                            `_Please confirm my appointment. Thank you!_`;
+
+            // Hospital WhatsApp Number
+            const whatsappNumber = "233256068240";
+
+            // Encode the message for URL usage
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // Show success alert message
             const successMsg = document.getElementById('appointmentSuccessMsg');
             successMsg.style.display = 'block';
-            
+
+            // Open WhatsApp after a short pause
             setTimeout(() => {
+                window.open(whatsappURL, '_blank');
                 document.getElementById('appointmentForm').reset();
                 successMsg.style.display = 'none';
-            }, 2000);
+            }, 1200);
         }
 
         function handleContactSubmit(e) {
@@ -2517,4 +2549,4 @@
     </script>
 </body>
 </html>
-```[cite: 12]
+```[cite: 14]
