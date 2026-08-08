@@ -3,7 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adlai Community Hospital - Quality Healthcare, Compassionate Service</title>
+    <title>Adlai Community Hospital - 24/7 Medical Care in Kasoa, Central Region Ghana</title>
+    
+    <!-- Hospital Schema Markup for Local SEO (#1 Google Maps Ranking) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hospital",
+      "name": "Adlai Community Hospital",
+      "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=80",
+      "url": "https://www.adlaihospital.com",
+      "telephone": "+23356068240",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nurses Quarters, Opposite Benab Filling Station",
+        "addressLocality": "Kasoa",
+        "addressRegion": "Central Region",
+        "addressCountry": "GH"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 5.5340,
+        "longitude": -0.4285
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "medicalSpecialty": [
+        "GeneralMedicine",
+        "EmergencyMedicine",
+        "Pediatrics",
+        "Obstetrics",
+        "Gynecology"
+      ],
+      "sameAs": [
+        "https://wa.me/23356068240"
+      ]
+    }
+    </script>
+
     <!-- Google Fonts & Font Awesome Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -51,18 +103,20 @@
 
         .text-center { text-align: center; }
 
-        /* --- Global Grow Hover Effect for Everything on the Page --- */
-        body *:hover {
-            transform: scale(1.015);
-            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+        /* --- Global Grow Hover Effect (Applied only on smaller screens via media query) --- */
+        @media (max-width: 992px) {
+            body *:hover {
+                transform: scale(1.015);
+                transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            }
 
-        body, html, header, footer, .container, .hero-overlay, .hero-media-container {
-            transform: none !important;
-        }
+            body, html, header, footer, .container, .hero-overlay, .hero-media-container {
+                transform: none !important;
+            }
 
-        .btn:hover, .facility-card:hover, .service-card:hover, .hour-card:hover, .doctor-card:hover, .stat-item:hover, .pillar-card:hover, .social-icon:hover {
-            transform: scale(1.035) !important;
+            .btn:hover, .facility-card:hover, .service-card:hover, .hour-card:hover, .doctor-card:hover, .stat-item:hover, .pillar-card:hover, .social-icon:hover {
+                transform: scale(1.035) !important;
+            }
         }
 
         /* --- Section Grow Highlight Animation --- */
@@ -92,7 +146,7 @@
             gap: 8px;
             padding: 10px 20px;
             border-radius: 8px;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -131,15 +185,6 @@
             color: var(--white);
         }
 
-        .btn-emergency {
-            background-color: #e11d48;
-            color: white;
-            padding: 6px 12px;
-            font-size: 10.5px;
-            border-radius: 50px;
-            display: none;
-        }
-
         .btn-chat-custom {
             background-color: var(--adlai-navy);
             color: white;
@@ -175,7 +220,7 @@
         }
 
         .floating-whatsapp-trigger:hover {
-            transform: scale(1.15) !important;
+            transform: scale(1.15);
             color: white;
         }
 
@@ -200,7 +245,7 @@
         }
 
         .floating-chat-trigger:hover {
-            transform: scale(1.15) !important;
+            transform: scale(1.15);
         }
 
         /* --- Chat Modal --- */
@@ -310,37 +355,37 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 70px;
+            height: 80px;
             max-width: 1400px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             text-decoration: none;
         }
 
         .logo-icon {
-            font-size: 26px;
+            font-size: 30px;
             color: var(--adlai-green);
         }
 
         .logo-text {
             display: flex;
             flex-direction: column;
-            line-height: 1;
+            line-height: 1.1;
         }
 
         .logo-text .brand-name {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 800;
             color: var(--adlai-navy);
             letter-spacing: 0.5px;
         }
 
         .logo-text .brand-sub {
-            font-size: 9px;
+            font-size: 10px;
             font-weight: 600;
             color: var(--adlai-green);
             letter-spacing: 1px;
@@ -349,22 +394,23 @@
         nav.desktop-nav > ul {
             display: flex;
             list-style: none;
-            gap: 18px;
+            gap: 16px;
             align-items: center;
         }
 
         nav.desktop-nav > ul > li > a, 
         .curtain-trigger {
-            font-size: 11.5px; /* Reduced font size for desktop nav links */
+            font-size: 13px;
             font-weight: 500;
             color: var(--text-dark);
-            padding: 8px 0;
+            padding: 10px 0;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 5px;
             transition: color 0.3s ease;
             white-space: nowrap;
+            letter-spacing: -0.2px;
         }
 
         nav.desktop-nav > ul > li > a:hover,
@@ -380,7 +426,7 @@
             position: absolute;
             top: 100%;
             left: 0;
-            width: 230px;
+            width: 270px;
             background-color: var(--white);
             box-shadow: 0 10px 30px rgba(0,0,0,0.12);
             border-radius: 0 0 8px 8px;
@@ -394,7 +440,7 @@
         }
 
         .curtain-menu-container:hover .curtain-dropdown {
-            max-height: 400px;
+            max-height: 480px;
             opacity: 1;
             visibility: visible;
         }
@@ -402,14 +448,16 @@
         .curtain-dropdown ul {
             list-style: none;
             padding: 10px 0;
+            max-height: 430px;
+            overflow-y: auto;
         }
 
         .curtain-dropdown ul li a {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 8px 16px;
-            font-size: 12px;
+            gap: 12px;
+            padding: 10px 18px;
+            font-size: 13.5px;
             color: var(--text-dark);
             transition: all 0.2s ease;
         }
@@ -417,19 +465,19 @@
         .curtain-dropdown ul li a:hover {
             background-color: var(--adlai-light-bg);
             color: var(--adlai-green);
-            padding-left: 20px;
+            padding-left: 22px;
         }
 
         .menu-toggle {
             display: none;
-            font-size: 20px;
+            font-size: 22px;
             color: var(--adlai-navy);
             cursor: pointer;
         }
 
         .mobile-curtain-nav {
             position: fixed;
-            top: 70px;
+            top: 80px;
             left: 0;
             width: 100%;
             background-color: var(--white);
@@ -460,7 +508,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 12px 0;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 500;
             color: var(--text-dark);
             width: 100%;
@@ -478,12 +526,28 @@
         }
 
         .mobile-submenu.open {
-            max-height: 300px;
+            max-height: 450px;
             padding: 8px 15px;
             margin-bottom: 10px;
         }
 
-        /* --- Hero Section --- */
+        .mobile-submenu a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 8px;
+            border-bottom: 1px dashed rgba(0,0,0,0.05);
+            font-size: 13px;
+        }
+        
+        .mobile-submenu a i {
+            color: var(--adlai-green);
+            font-size: 14px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* --- Hero Section with Slow, Smooth Rotation --- */
         .hero {
             position: relative;
             padding: 90px 0;
@@ -511,7 +575,7 @@
             height: 100%;
             object-fit: cover;
             opacity: 0;
-            transition: opacity 1s ease-in-out;
+            transition: opacity 1.5s ease-in-out;
         }
 
         .hero-media-slide.active {
@@ -524,7 +588,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(15, 43, 92, 0.45), rgba(10, 27, 58, 0.55));
+            background: linear-gradient(135deg, rgba(15, 43, 92, 0.5), rgba(10, 27, 58, 0.65));
             z-index: 2;
         }
 
@@ -541,6 +605,13 @@
         .hero-content {
             max-width: 680px;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+            opacity: 1;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .hero-content.fade-out {
+            opacity: 0;
+            transform: translateY(10px);
         }
 
         .hero-since {
@@ -554,7 +625,7 @@
         }
 
         .hero h1 {
-            font-size: 40px;
+            font-size: 38px;
             font-weight: 800;
             line-height: 1.15;
             margin-bottom: 15px;
@@ -807,7 +878,7 @@
             color: var(--text-muted);
         }
 
-        /* --- Services Section --- */
+        /* --- Services Section with Real Images --- */
         .services {
             padding: 70px 0;
             background: linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94)),
@@ -816,35 +887,52 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 30px;
         }
 
         .service-card {
             background: var(--white);
-            padding: 25px 18px;
-            border-radius: 10px;
-            text-align: center;
+            border-radius: 12px;
+            overflow: hidden;
             box-shadow: var(--shadow-soft);
             border: 1px solid var(--border-color);
             transition: all 0.3s ease;
+            text-align: left;
         }
 
         .service-card:hover {
             border-color: var(--adlai-green);
+            transform: translateY(-4px);
         }
 
-        .service-icon {
-            width: 50px;
-            height: 50px;
+        .service-img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+        }
+
+        .service-body {
+            padding: 20px;
+            position: relative;
+        }
+
+        .service-icon-badge {
+            width: 42px;
+            height: 42px;
             background-color: var(--adlai-light-bg);
+            color: var(--adlai-green);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 12px;
-            color: var(--adlai-green);
-            font-size: 20px;
+            font-size: 16px;
+            margin-top: -38px;
+            position: relative;
+            border: 2px solid var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            margin-bottom: 12px;
         }
 
         .service-card h3 {
@@ -856,10 +944,10 @@
         .service-card p {
             font-size: 12px;
             color: var(--text-muted);
-            margin-bottom: 15px;
+            line-height: 1.5;
         }
 
-        /* --- NEW MODERN APPOINTMENT SECTION --- */
+        /* --- Appointment Section --- */
         .appointment-section {
             padding: 90px 0;
             background: linear-gradient(135deg, #f4f9f1 0%, #e8f4e2 100%);
@@ -925,7 +1013,6 @@
             border-radius: 50%;
         }
 
-        /* Modern Integration / Trust Logos inside Appointment Banner */
         .appt-trust-logos {
             border-top: 1px solid rgba(255, 255, 255, 0.15);
             padding-top: 20px;
@@ -1153,6 +1240,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
+            margin-top: 30px;
         }
 
         .doctor-card {
@@ -1183,24 +1271,100 @@
             margin-bottom: 12px;
         }
 
-        /* --- Contact Section --- */
+        /* --- Enhanced Contact Section --- */
         .contact { 
-            padding: 70px 0; 
-            background-color: var(--adlai-light-bg); 
+            padding: 90px 0; 
+            background: linear-gradient(135deg, #f4f9f1 0%, #e8f4e2 100%);
+            position: relative;
         }
 
-        .contact-container-center {
-            max-width: 600px;
-            margin: 0 auto;
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            align-items: stretch;
+            margin-top: 30px;
         }
 
-        .contact-info-card {
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            text-align: center;
+        .contact-info-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-card-item {
+            background: var(--white);
+            padding: 24px;
+            border-radius: 14px;
             box-shadow: var(--shadow-soft);
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .contact-card-item:hover {
+            transform: translateY(-4px);
+            border-color: var(--adlai-green);
+        }
+
+        .contact-card-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--adlai-light-bg);
+            color: var(--adlai-green);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-card-content h4 {
+            font-size: 15px;
+            color: var(--adlai-navy);
+            margin-bottom: 4px;
+        }
+
+        .contact-card-content p {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .contact-form-wrapper {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(15, 43, 92, 0.08);
+            border: 1px solid rgba(76, 166, 38, 0.2);
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 20px;
+            color: var(--adlai-navy);
+            margin-bottom: 8px;
+        }
+
+        .contact-form-wrapper p {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        .contact-success-msg {
+            display: none;
+            background: #dcfce7;
+            border: 1px solid #22c55e;
+            color: #166534;
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 12.5px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
         }
 
         /* --- Footer --- */
@@ -1338,22 +1502,22 @@
             gap: 10px;
         }
 
-        /* --- Responsive Media Queries --- */
+        /* =========================================================
+           RESPONSIVE FIXES FOR SMALLER SCREENS
+           ========================================================= */
         @media (min-width: 993px) {
             .btn-appointment-desktop { 
                 display: inline-flex; 
-                font-size: 11px; /* Reduced font size for desktop "Book Appointment" button on larger screens */
-                padding: 8px 16px; /* Adjusted padding to match smaller font */
+                font-size: 11px;
+                padding: 8px 14px;
             }
-            .btn-emergency { display: none !important; }
         }
 
         @media (max-width: 992px) {
             .desktop-nav { display: none; }
             .menu-toggle { display: block; }
             .btn-appointment-desktop { display: none; }
-            .btn-emergency { display: inline-flex; }
-            .about-grid, .location-grid, .appointment-wrapper { grid-template-columns: 1fr; }
+            .about-grid, .location-grid, .appointment-wrapper, .contact-grid { grid-template-columns: 1fr; }
             .facilities-grid, .services-grid, .doctors-grid, .hours-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
             .hero-container-flex { flex-direction: column; text-align: center; }
@@ -1361,23 +1525,60 @@
             .hero-floating-card { width: 100%; }
             .appointment-info-side { padding: 35px; }
             .appointment-form-side { padding: 30px; }
+            .contact-form-wrapper { padding: 30px; }
         }
 
         @media (max-width: 768px) {
             .form-grid-2 { grid-template-columns: 1fr; }
             .about-pillars { grid-template-columns: 1fr; }
             .about-stats { flex-direction: column; gap: 10px; }
-            .facilities-grid, .doctors-grid, .services-grid, .hours-grid { grid-template-columns: 1fr; }
+            .facilities-grid, .doctors-grid, .hours-grid, .services-grid { grid-template-columns: 1fr; }
+            
+            .logos-bar {
+                padding: 16px 10px;
+            }
+            .logos-flex {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 14px 18px;
+            }
+            .logo-item {
+                font-size: 11px;
+                gap: 6px;
+                background: var(--white);
+                padding: 6px 10px;
+                border-radius: 6px;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            }
+            .logo-item i {
+                font-size: 16px;
+            }
+
             .footer-grid { grid-template-columns: 1fr; }
             .footer-top-cta { text-align: center; justify-content: center; }
             .hero h1 { font-size: 26px; }
+
+            .mobile-curtain-nav ul li a[href="#appointment"] {
+                background: linear-gradient(135deg, var(--adlai-green), var(--adlai-green-dark));
+                color: var(--white) !important;
+                padding: 12px 16px;
+                border-radius: 8px;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                font-weight: 700;
+                box-shadow: 0 4px 12px rgba(76, 166, 38, 0.25);
+                justify-content: center;
+                gap: 8px;
+            }
         }
     </style>
 </head>
 <body>
 
     <!-- Floating WhatsApp Direct Widget Button -->
-    <a href="https://wa.me/233539847422" target="_blank" class="floating-whatsapp-trigger" title="Chat on WhatsApp">
+    <a href="https://wa.me/23356068240" target="_blank" class="floating-whatsapp-trigger" title="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -1393,8 +1594,8 @@
             <h3>Connect With Us</h3>
             <p>Choose your preferred platform to start a conversation:</p>
             
-            <a href="https://wa.me/233539847422" target="_blank" class="chat-option-btn chat-option-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> Chat via WhatsApp (+233 53 984 7422)
+            <a href="https://wa.me/23356068240" target="_blank" class="chat-option-btn chat-option-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Chat via WhatsApp (+233 56 068 240)
             </a>
             
             <a href="mailto:payedvheques2gmail.com" class="chat-option-btn chat-option-email">
@@ -1425,10 +1626,17 @@
                         <span class="curtain-trigger">Our Services <i class="fa-solid fa-chevron-down" style="font-size: 9px;"></i></span>
                         <div class="curtain-dropdown">
                             <ul>
-                                <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-stethoscope"></i> General Medicine</a></li>
-                                <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-heart-pulse"></i> Cardiology Check</a></li>
-                                <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-vials"></i> Lab Screening</a></li>
-                                <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-pills"></i> Pharmacy</a></li>
+                                <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-user-injured"></i> Out Patient (General OPD)</a></li>
+                                <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-truck-medical"></i> Emergency Services</a></li>
+                                <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-bed-pulse"></i> In-Patient Services</a></li>
+                                <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-baby"></i> Maternity Services</a></li>
+                                <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-calendar-plus"></i> Ante Natal Care (ANC)</a></li>
+                                <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-baby-carriage"></i> Post Natal Care (PNC)</a></li>
+                                <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-vials"></i> Laboratory</a></li>
+                                <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-wave-square"></i> Ultra Sound Scan</a></li>
+                                <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-hand-holding-medical"></i> Wound Care & Suturing</a></li>
+                                <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-heart-pulse"></i> Hypertension & Diabetes</a></li>
+                                <li><a href="#appointment" class="smooth-scroll-link"><i class="fa-solid fa-calendar-check"></i> Book Appointment</a></li>
                             </ul>
                         </div>
                     </li>
@@ -1439,17 +1647,19 @@
                             <ul>
                                 <li><a href="#doctors" class="smooth-scroll-link"><i class="fa-solid fa-user-md"></i> Medical Consultants</a></li>
                                 <li><a href="#doctors" class="smooth-scroll-link"><i class="fa-solid fa-user-nurse"></i> Nursing Staff</a></li>
+                                <li><a href="#appointment" class="smooth-scroll-link"><i class="fa-solid fa-calendar-check"></i> Book Appointment</a></li>
                             </ul>
                         </div>
                     </li>
 
                     <li class="curtain-menu-container">
                         <span class="curtain-trigger">Hours <i class="fa-solid fa-chevron-down" style="font-size: 9px;"></i></span>
-                        <div class="curtain-dropdown" style="width: 250px;">
+                        <div class="curtain-dropdown" style="width: 270px;">
                             <ul>
                                 <li><a href="#hours" class="smooth-scroll-link"><i class="fa-solid fa-clock"></i> Emergency: 24/7 Daily</a></li>
                                 <li><a href="#hours" class="smooth-scroll-link"><i class="fa-solid fa-calendar-days"></i> Outpatient: Mon - Sat (8am - 8pm)</a></li>
                                 <li><a href="#hours" class="smooth-scroll-link"><i class="fa-solid fa-flask"></i> Laboratory: 24/7 Available</a></li>
+                                <li><a href="#appointment" class="smooth-scroll-link"><i class="fa-solid fa-calendar-check"></i> Book Appointment</a></li>
                             </ul>
                         </div>
                     </li>
@@ -1464,33 +1674,56 @@
                     <i class="fa-regular fa-calendar-check"></i> Book Appointment
                 </a>
 
-                <a href="tel:0544293468" class="btn btn-emergency">
-                    <i class="fa-solid fa-phone"></i> Emergency
-                </a>
-
                 <div class="menu-toggle" id="mobileMenuBtn">
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Curtain Menu -->
+        <!-- Mobile Curtain Menu with Service Logos & Icons -->
         <div class="mobile-curtain-nav" id="mobileCurtainNav">
             <ul>
-                <li><a href="#" class="smooth-scroll-link">Home</a></li>
-                <li><a href="#about" class="smooth-scroll-link">About Us</a></li>
-                <li><a href="#facilities" class="smooth-scroll-link">Facilities</a></li>
+                <li><a href="#" class="smooth-scroll-link"><i class="fa-solid fa-house" style="color:var(--adlai-green); width:20px;"></i> Home</a></li>
+                <li><a href="#about" class="smooth-scroll-link"><i class="fa-solid fa-circle-info" style="color:var(--adlai-green); width:20px;"></i> About Us</a></li>
+                <li><a href="#facilities" class="smooth-scroll-link"><i class="fa-solid fa-hospital-user" style="color:var(--adlai-green); width:20px;"></i> Facilities</a></li>
                 <li>
                     <button class="mobile-dropdown-btn" onclick="toggleMobileSubmenu('servMob')">
-                        Our Services <i class="fa-solid fa-chevron-down"></i>
+                        <span><i class="fa-solid fa-stethoscope" style="color:var(--adlai-green); margin-right:8px;"></i> Our Services</span> <i class="fa-solid fa-chevron-down"></i>
                     </button>
                     <div class="mobile-submenu" id="servMob">
-                        <a href="#services" class="smooth-scroll-link">General Medicine</a>
-                        <a href="#services" class="smooth-scroll-link">Lab Screening</a>
+                        <a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-user-injured"></i> Out Patient (General OPD)</a>
+                        <a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-truck-medical"></i> Emergency Services</a>
+                        <a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-bed-pulse"></i> In-Patient Services</a>
+                        <a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-baby"></i> Maternity Services</a>
+                        <a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-calendar-plus"></i> Ante Natal Care (ANC)</a>
+                        <a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-baby-carriage"></i> Post Natal Care (PNC)</a>
+                        <a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-vials"></i> Laboratory Diagnostics</a>
+                        <a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-wave-square"></i> Ultra Sound Scan</a>
+                        <a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-hand-holding-medical"></i> Wound Care & Suturing</a>
+                        <a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-heart-pulse"></i> Hypertension & Diabetes Clinic</a>
                     </div>
                 </li>
-                <li><a href="#appointment" class="smooth-scroll-link">Book Appointment</a></li>
-                <li><a href="#contact" class="smooth-scroll-link">Contact</a></li>
+                <li>
+                    <button class="mobile-dropdown-btn" onclick="toggleMobileSubmenu('teamMob')">
+                        <span><i class="fa-solid fa-users" style="color:var(--adlai-green); margin-right:8px;"></i> Our Team</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-submenu" id="teamMob">
+                        <a href="#doctors" class="smooth-scroll-link"><i class="fa-solid fa-user-md"></i> Medical Consultants</a>
+                        <a href="#doctors" class="smooth-scroll-link"><i class="fa-solid fa-user-nurse"></i> Nursing Staff</a>
+                    </div>
+                </li>
+                <li>
+                    <button class="mobile-dropdown-btn" onclick="toggleMobileSubmenu('hoursMob')">
+                        <span><i class="fa-solid fa-clock" style="color:var(--adlai-green); margin-right:8px;"></i> Hours</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="mobile-submenu" id="hoursMob">
+                        <a href="#hours" class="smooth-scroll-link"><i class="fa-solid fa-clock"></i> Emergency: 24/7 Daily</a>
+                        <a href="#hours" class="smooth-scroll-link"><i class="fa-solid fa-calendar-days"></i> Outpatient: Mon - Sat (8am - 8pm)</a>
+                        <a href="#hours" class="smooth-scroll-link"><i class="fa-solid fa-flask"></i> Laboratory: 24/7 Available</a>
+                    </div>
+                </li>
+                <li><a href="#contact" class="smooth-scroll-link"><i class="fa-solid fa-address-book" style="color:var(--adlai-green); width:20px;"></i> Contact</a></li>
+                <li><a href="#appointment" class="smooth-scroll-link"><i class="fa-regular fa-calendar-check" style="color:var(--adlai-green); width:20px;"></i> Book Appointment</a></li>
             </ul>
         </div>
     </header>
@@ -1498,25 +1731,26 @@
     <!-- Hero Section -->
     <section class="hero" id="heroSection">
         <div class="hero-media-container" id="heroMediaContainer">
-            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=80" class="hero-media-slide active" alt="Hospital Exterior">
-            <video class="hero-media-slide" muted playsinline preload="auto">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-doctor-checking-a-patient-in-a-hospital-41846-large.mp4" type="video/mp4">
-            </video>
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=80" class="hero-media-slide active" alt="Adlai Community Hospital Kasoa">
+            <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1600&q=80" class="hero-media-slide" alt="Maternity & Newborn Care Kasoa">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1600&q=80" class="hero-media-slide" alt="Ultrasound Scan and Laboratory">
+            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1600&q=80" class="hero-media-slide" alt="Hospital Wards and Facilities">
         </div>
         <div class="hero-overlay"></div>
         <div class="container hero-container-flex">
-            <div class="hero-content">
-                <span class="hero-since">Since 2024</span>
-                <h1>Adlai’s Premier<br>Community Hospital</h1>
-                <p>Over a century of healing, training the next generation of leaders, and advancing medical research for Ghana and the world.</p>
+            <div class="hero-content" id="heroContent">
+                <span class="hero-since" id="heroSinceTag">Kasoa, Central Region • 24/7 Care</span>
+                <h1 id="heroTitle">Adlai’s Premier<br>Community Hospital</h1>
+                <p id="heroDesc">Located at the Nurses Quarters, opposite Benab Filling Station in Kasoa. Delivering top-tier healthcare, compassionate service, and emergency medical support for Central Region families.</p>
                 <div class="hero-btn-group" style="display: flex; gap: 12px; flex-wrap: wrap;">
                     <a href="#appointment" class="btn btn-green smooth-scroll-link"><i class="fa-regular fa-calendar-check"></i> Book Appointment</a>
+                    <a href="tel:+23356068240" class="btn btn-emergency" style="display: inline-flex; border-radius: 8px; font-size: 13px; padding: 10px 20px; background-color: #e11d48; color: white;"><i class="fa-solid fa-phone"></i> Emergency Call</a>
                     <a href="#about" class="btn btn-outline-navy smooth-scroll-link" style="color: #fff; border-color: #fff;">Our Story</a>
                 </div>
             </div>
             <div class="hero-right-wrapper">
                 <div class="hero-floating-card">
-                    <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80" alt="Hospital Facility">
+                    <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80" alt="Hospital Facility Kasoa">
                 </div>
             </div>
         </div>
@@ -1539,7 +1773,15 @@
             </div>
             <div class="logo-item">
                 <i class="fa-solid fa-house-medical-circle-check"></i>
-                <span>WHO HEALTH COMPLIANT</span>
+                <span>KASOA CENTRAL HEALTH</span>
+            </div>
+            <div class="logo-item">
+                <i class="fa-solid fa-stethoscope"></i>
+                <span>EXPERT PHYSICIANS</span>
+            </div>
+            <div class="logo-item">
+                <i class="fa-solid fa-notes-medical"></i>
+                <span>24/7 CLINIC CARE</span>
             </div>
         </div>
     </section>
@@ -1550,7 +1792,7 @@
             <div class="about-grid">
                 <div class="about-image-wrapper">
                     <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80" 
-                         alt="Adlai Hospital Medical Team" 
+                         alt="Adlai Hospital Medical Team Kasoa" 
                          class="about-main-img">
                     <div class="about-experience-badge">
                         <span>24/7</span>
@@ -1559,11 +1801,11 @@
                 </div>
 
                 <div class="about-content">
-                    <span class="section-tag">About Adlai Hospital</span>
-                    <h2 style="font-size: 26px; color: var(--adlai-navy); font-weight: 700; margin-bottom: 15px;">Dedicated To Your Family’s Health & Well-Being</h2>
+                    <span class="section-tag">About Adlai Hospital Kasoa</span>
+                    <h2 style="font-size: 26px; color: var(--adlai-navy); font-weight: 700; margin-bottom: 15px;">Your Trusted Healthcare Partner in Kasoa</h2>
                     
                     <p style="font-size: 13px; color: var(--text-dark); margin-bottom: 15px;">
-                        At <strong>Adlai Community Hospital</strong>, we believe that quality healthcare should be compassionate, accessible, and centered around the family. Our team of dedicated medical doctors, nurses, and laboratory specialists are committed to giving you the highest standard of preventive and clinical care.
+                        At <strong>Adlai Community Hospital</strong> in Kasoa (Central Region), situated conveniently at the Nurses Quarters opposite Benab Filling Station, we provide professional medical attention, emergency support, and family-centered care. Our specialists ensure reliable diagnostics and effective treatments.
                     </p>
 
                     <div class="about-stats">
@@ -1591,24 +1833,24 @@
                     <div class="about-expanded-content" id="aboutExpandedContent">
                         <h4 style="color: var(--adlai-navy); font-size: 14px; margin-bottom: 8px;"><i class="fa-solid fa-heart-pulse" style="color: var(--adlai-green);"></i> Our Mission & Vision</h4>
                         <p style="font-size: 12px; color: var(--text-dark); margin-bottom: 12px;">
-                            Our mission is to foster a healthier community by delivering timely, affordable, and compassionate medical solutions. We strive to be the most trusted family-centered hospital in our region.
+                            Our mission is to foster a healthier community across Kasoa and the Central Region by delivering timely, affordable, and compassionate medical solutions.
                         </p>
 
                         <div class="about-pillars">
                             <div class="pillar-card">
                                 <i class="fa-solid fa-shield-halved"></i>
                                 <strong>Patient Safety</strong>
-                                <p style="font-size: 10px; color: var(--text-muted);">Strict hygiene and patient-first protocols.</p>
+                                <p style="font-size: 10px; color: var(--text-muted);">Strict hygiene and patient protocols.</p>
                             </div>
                             <div class="pillar-card">
                                 <i class="fa-solid fa-hand-holding-heart"></i>
                                 <strong>Compassion</strong>
-                                <p style="font-size: 10px; color: var(--text-muted);">Treating every patient like beloved family.</p>
+                                <p style="font-size: 10px; color: var(--text-muted);">Treating every patient like family.</p>
                             </div>
                             <div class="pillar-card">
                                 <i class="fa-solid fa-kit-medical"></i>
                                 <strong>Prompt Care</strong>
-                                <p style="font-size: 10px; color: var(--text-muted);">Minimal waiting times and immediate attention.</p>
+                                <p style="font-size: 10px; color: var(--text-muted);">Minimal waiting times and attention.</p>
                             </div>
                         </div>
                     </div>
@@ -1621,80 +1863,150 @@
     <section class="facilities-section" id="facilities">
         <div class="container text-center">
             <span class="section-tag">State-of-the-Art Infrastructure</span>
-            <h2 class="section-title">Explore Our Hospital Facilities</h2>
+            <h2 class="section-title">Explore Our Hospital Facilities in Kasoa</h2>
             <div class="facilities-grid">
                 <div class="facility-card">
                     <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80" alt="Reception" class="facility-img">
                     <div class="facility-body">
                         <h3>Reception & Lobby</h3>
-                        <p>Comfortable, spacious waiting area with prompt patient registration services.</p>
+                        <p>Comfortable waiting area with quick registration located near Benab Filling Station.</p>
                     </div>
                 </div>
                 <div class="facility-card">
                     <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Laboratory" class="facility-img">
                     <div class="facility-body">
                         <h3>Diagnostic Laboratory</h3>
-                        <p>Fully automated pathology and blood screening equipment for accurate results.</p>
+                        <p>Automated pathology and blood screening equipment for rapid test results.</p>
                     </div>
                 </div>
                 <div class="facility-card">
                     <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80" alt="Emergency Ward" class="facility-img">
                     <div class="facility-body">
                         <h3>Emergency Care Ward</h3>
-                        <p>Ready 24/7 with life-support tools and trauma response specialists.</p>
+                        <p>Open 24/7 with life-support tools and responsive trauma doctors.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Grid -->
+    <!-- Services Section with Real Images & Floating Badges -->
     <section class="services" id="services">
         <div class="container text-center">
             <span class="section-tag">Our Medical Services</span>
-            <h2 class="section-title">Comprehensive Community Healthcare</h2>
+            <h2 class="section-title">Comprehensive Healthcare Services</h2>
             <div class="services-grid">
+                
                 <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-stethoscope"></i></div>
-                    <h3>General Consultation</h3>
-                    <p>Expert diagnostic evaluations and compassionate general outpatient care.</p>
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Out Patient Services" class="service-img">
+                    <div class="service-body">
+                        <div class="service-icon-badge"><i class="fa-solid fa-user-injured"></i></div>
+                        <h3>Out Patient Services (General OPD)</h3>
+                        <p>Expert diagnostic evaluations, primary care, and outpatient medical consultations.</p>
+                    </div>
                 </div>
+
                 <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-vials"></i></div>
-                    <h3>Laboratory Services</h3>
-                    <p>Accurate, automated blood tests and diagnostic screening.</p>
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80" alt="Emergency Services" class="service-img">
+                    <div class="service-body">
+                        <div class="service-icon-badge"><i class="fa-solid fa-truck-medical"></i></div>
+                        <h3>Emergency Services</h3>
+                        <p>24/7 prompt trauma, urgent care, and critical medical intervention support.</p>
+                    </div>
                 </div>
+
                 <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-                    <h3>ECG & Scans</h3>
-                    <p>Modern ultrasound scanning and cardiac health screening.</p>
+                    <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=600&q=80" alt="In-Patient Services" class="service-img">
+                    <div class="service-body">
+                        <div class="service-icon-badge"><i class="fa-solid fa-bed-pulse"></i></div>
+                        <h3>In-Patient Services</h3>
+                        <p>Comfortable admission wards managed round-the-clock by professional nurses and doctors.</p>
+                    </div>
                 </div>
+
                 <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-pills"></i></div>
-                    <h3>Hospital Pharmacy</h3>
-                    <p>Fully stocked pharmacy ensuring safe and accessible medications.</p>
+                    <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80" alt="Maternity Services" class="service-img">
+                    <div class="service-body">
+                        <div class="service-icon-badge"><i class="fa-solid fa-baby"></i></div>
+                        <h3>Maternity Services</h3>
+                        <p>Safe delivery, prenatal care, and comprehensive maternal health support.</p>
+                    </div>
                 </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80" alt="Ante Natal Care" class="service-img">
+                    <div class="service-body">
+                        <div class="service-icon-badge"><i class="fa-solid fa-calendar-plus"></i></div>
+                        <h3>Ante Natal Care (ANC)</h3>
+                        <p>Routine check-ups, monitoring, and educational health sessions for expectant mothers.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=600&q=80" alt="Post Natal Care" class="service-img">
+                    <div class="service-body">
+                        <div class="service-icon-badge"><i class="fa-solid fa-baby-carriage"></i></div>
+                        <h3>Post Natal Care (PNC)</h3>
+                        <p>Post-delivery recovery evaluation, newborn check-ups, and lactation counseling.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Laboratory" class="service-img">
+                    <div class="service-body">
+                        <div class="service-icon-badge"><i class="fa-solid fa-vials"></i></div>
+                        <h3>Laboratory</h3>
+                        <p>Accurate, rapid blood tests, urinalysis, and comprehensive diagnostic screenings.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?auto=format&fit=crop&w=600&q=80" alt="Ultra Sound Scan" class="service-img">
+                    <div class="service-body">
+                        <div class="service-icon-badge"><i class="fa-solid fa-wave-square"></i></div>
+                        <h3>Ultra Sound Scan</h3>
+                        <p>Advanced imaging solutions for accurate obstetric, gynecological, and internal diagnostics.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80" alt="Wound Care" class="service-img">
+                    <div class="service-body">
+                        <div class="service-icon-badge"><i class="fa-solid fa-hand-holding-medical"></i></div>
+                        <h3>Wound Care & Suturing</h3>
+                        <p>Professional cleaning, dressing, minor surgical procedures, and laceration suturing.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80" alt="Hypertension & Diabetes" class="service-img">
+                    <div class="service-body">
+                        <div class="service-icon-badge"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <h3>Hypertension & Diabetes Clinic</h3>
+                        <p>Specialized chronic condition monitoring, routine check-ups, and expert management.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- UPDATED MODERN BOOK APPOINTMENT SECTION -->
+    <!-- Modern Appointment Section -->
     <section class="appointment-section" id="appointment">
         <div class="container">
             <div class="text-center" style="margin-bottom: 40px;">
                 <span class="section-tag">Easy Online Scheduling</span>
                 <h2 class="section-title" style="margin-bottom: 10px;">Book Your Medical Appointment</h2>
                 <p style="font-size: 13px; color: var(--text-muted); max-width: 600px; margin: 0 auto;">
-                    Schedule your visit with our certified medical specialists quickly and securely. Fill out the form or choose your preferred department below.
+                    Schedule your visit with our certified medical specialists at our Kasoa branch quickly and securely.
                 </p>
             </div>
 
             <div class="appointment-wrapper">
-                <!-- Left Information Panel with Modern Logos -->
                 <div class="appointment-info-side">
                     <div>
                         <h2>We Are Here For Your Health</h2>
-                        <p>Bookings are reviewed instantly by our reception desk. Enjoy minimal waiting times and priority care upon arrival.</p>
+                        <p>Fill out the form to request your appointment booking. Enjoy priority attention upon arrival.</p>
                         
                         <div class="appt-perks">
                             <div class="appt-perk-item">
@@ -1703,7 +2015,7 @@
                             </div>
                             <div class="appt-perk-item">
                                 <i class="fa-solid fa-clock-rotate-left"></i>
-                                <div>Instant SMS/WhatsApp Confirmation</div>
+                                <div>Fast Booking Confirmation</div>
                             </div>
                             <div class="appt-perk-item">
                                 <i class="fa-solid fa-shield-heart"></i>
@@ -1712,11 +2024,10 @@
                         </div>
                     </div>
 
-                    <!-- Modern Partner / Compliance Logos Container -->
                     <div class="appt-trust-logos">
                         <span>Trusted Standards & Partners</span>
                         <div class="appt-logos-grid">
-                            <div class="appt-logo-badge"><i class="fa-solid fa-star"></i> 4.9/5 Patient Rating</div>
+                            <div class="appt-logo-badge"><i class="fa-solid fa-star"></i> 4.9/5 Rating</div>
                             <div class="appt-logo-badge"><i class="fa-solid fa-circle-check"></i> NHIS Accepted</div>
                             <div class="appt-logo-badge"><i class="fa-solid fa-shield-halved"></i> HIPAA Compliant</div>
                             <div class="appt-logo-badge"><i class="fa-solid fa-bolt"></i> Express Queue</div>
@@ -1726,10 +2037,9 @@
                     </div>
                 </div>
 
-                <!-- Right Form Panel -->
                 <div class="appointment-form-side">
                     <div class="appointment-success-msg" id="appointmentSuccessMsg">
-                        <i class="fa-solid fa-circle-check"></i> Appointment booked successfully! We will contact you via phone or WhatsApp shortly.
+                        <i class="fa-solid fa-circle-check"></i> Thank you! Submitting your appointment details...
                     </div>
 
                     <form id="appointmentForm" onsubmit="handleAppointmentSubmit(event)">
@@ -1739,7 +2049,7 @@
                                 <input type="text" id="patientName" class="form-control" placeholder="e.g. Ama Serwaa" required>
                             </div>
                             <div class="form-group">
-                                <label for="patientPhone"><i class="fa-solid fa-phone"></i> Phone / WhatsApp</label>
+                                <label for="patientPhone"><i class="fa-solid fa-phone"></i> Phone Number</label>
                                 <input type="tel" id="patientPhone" class="form-control" placeholder="e.g. 054 123 4567" required>
                             </div>
                         </div>
@@ -1749,10 +2059,16 @@
                                 <label for="departmentSelect"><i class="fa-solid fa-hospital-user"></i> Department / Service</label>
                                 <select id="departmentSelect" class="form-control" required>
                                     <option value="" disabled selected>Select Department</option>
-                                    <option value="General Medicine">General Medicine & Consultation</option>
-                                    <option value="Laboratory">Laboratory & Blood Screening</option>
-                                    <option value="Ultrasound Scan">Ultrasound Scan & Cardiology</option>
-                                    <option value="Pharmacy">Pharmacy & Refill Pickup</option>
+                                    <option value="Out Patient Services (General OPD)">Out Patient Services (General OPD)</option>
+                                    <option value="Emergency Services">Emergency Services</option>
+                                    <option value="In-Patient Services">In-Patient Services</option>
+                                    <option value="Maternity">Maternity Services</option>
+                                    <option value="Ante Natal Care (ANC)">Ante Natal Care (ANC)</option>
+                                    <option value="Post Natal Care (PNC)">Post Natal Care (PNC)</option>
+                                    <option value="Laboratory">Laboratory</option>
+                                    <option value="Ultra Sound Scan">Ultra Sound Scan</option>
+                                    <option value="Wound Care & Suturing">Wound Care & Suturing</option>
+                                    <option value="Hypertension & Diabetes Clinic">Hypertension & Diabetes Clinic</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -1788,7 +2104,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-green" style="width: 100%; justify-content: center; padding: 14px; font-size: 13px;">
-                            <i class="fa-solid fa-calendar-check"></i> Confirm & Book Appointment Now
+                            <i class="fa-solid fa-calendar-check"></i> Book Appointment Now
                         </button>
                     </form>
                 </div>
@@ -1806,7 +2122,7 @@
                     <div class="hour-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
                     <h3>Emergency Department</h3>
                     <span class="time-badge">Always Open</span>
-                    <p>Available 24 hours a day, 7 days a week for urgent care and trauma responses.</p>
+                    <p>Available 24 hours a day, 7 days a week for urgent care and trauma responses in Kasoa.</p>
                 </div>
                 <div class="hour-card">
                     <div class="hour-icon"><i class="fa-solid fa-calendar-check"></i></div>
@@ -1831,30 +2147,30 @@
             <h2 class="section-title text-center">Our Hospital Location & Directions</h2>
             <div class="location-grid">
                 <div class="location-details-box">
-                    <h3>Adlai Community Hospital Main Branch</h3>
+                    <h3>Adlai Community Hospital - Kasoa Branch</h3>
                     <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 15px;">
-                        Conveniently situated in the heart of the community center with easy access to main roads and public transport.
+                        Easily accessible location in Central Region, Kasoa.
                     </p>
                     <ul class="location-feature-list">
                         <li>
                             <i class="fa-solid fa-location-dot"></i>
-                            <div><strong>Address:</strong> Community Centre Main Street, Near Central Station</div>
+                            <div><strong>Address:</strong> Nurses Quarters, Opposite Benab Filling Station, Kasoa, Central Region, Ghana</div>
                         </li>
                         <li>
                             <i class="fa-solid fa-phone"></i>
-                            <div><strong>Direct Lines:</strong> 054 429 3468 / 050 992 5533</div>
+                            <div><strong>Direct Emergency Line:</strong> +233 56 068 240</div>
                         </li>
                         <li>
                             <i class="fa-solid fa-envelope"></i>
                             <div><strong>Email:</strong> payedvheques2gmail.com</div>
                         </li>
                     </ul>
-                    <a href="https://wa.me/233539847422" target="_blank" class="btn btn-green" style="margin-top: 10px;">
-                        <i class="fa-brands fa-whatsapp"></i> Get Directions via WhatsApp
+                    <a href="#contact" class="btn btn-green smooth-scroll-link" style="margin-top: 10px;">
+                        <i class="fa-solid fa-comments"></i> Contact Us Now
                     </a>
                 </div>
                 <div class="map-wrapper">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.975496464875!2d-0.1870!3d5.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMzYnMTMuMyJOIDDCsDExJzEzLjIiVw!5e0!3m2!1sen!2sgh!4v1650000000000!5m2!1sen!2sgh" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.975496464875!2d-0.4285!3d5.5340!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNsKwMzInMDIuNCJOIDDCsDI1JzQyLjYiVw!5e0!3m2!1sen!2sgh!4v1650000000000!5m2!1sen!2sgh" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -1891,33 +2207,89 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Enhanced Contact Section -->
     <section class="contact" id="contact">
-        <div class="container contact-container-center">
-            <span class="section-tag text-center">Contact Us</span>
-            <h2 class="section-title text-center">Get in Touch With Us</h2>
-            <div class="contact-info-card">
-                <h3 style="color: var(--adlai-navy); font-size: 18px; margin-bottom: 10px;">Adlai Community Hospital</h3>
-                <p style="font-size: 12.5px; color: var(--text-muted); margin-bottom: 20px;">Reach out to our team directly through phone, email, or chat.</p>
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 20px;">
+                <span class="section-tag">Contact Us</span>
+                <h2 class="section-title" style="margin-bottom: 10px;">Get in Touch With Our Kasoa Team</h2>
+                <p style="font-size: 13px; color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+                    We are available around the clock to answer your inquiries, handle emergency requests, or guide you to our facility.
+                </p>
+            </div>
 
-                <div style="margin-bottom: 15px;">
-                    <strong style="font-size: 12px; color: var(--adlai-green); text-transform: uppercase;">Direct Lines:</strong>
-                    <p style="font-size: 13px; font-weight: 600;"><i class="fa-solid fa-phone"></i> 054 429 3468 | 050 992 5533</p>
+            <div class="contact-grid">
+                <!-- Left Column: Detailed Contact Cards -->
+                <div class="contact-info-cards">
+                    <div class="contact-card-item">
+                        <div class="contact-card-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h4>Hospital Location</h4>
+                            <p>Nurses Quarters, Opposite Benab Filling Station, Kasoa, Central Region, Ghana</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card-item">
+                        <div class="contact-card-icon">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h4>Emergency & Phone Line</h4>
+                            <p>+233 56 068 240<br>Available 24/7 for urgent calls</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card-item">
+                        <div class="contact-card-icon">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h4>Email & Website</h4>
+                            <p>payedvheques2gmail.com<br>www.adlaihospital.com</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 12px; margin-top: 5px;">
+                        <a href="tel:+23356068240" class="btn btn-navy" style="flex: 1; justify-content: center;">
+                            <i class="fa-solid fa-phone"></i> Call Us
+                        </a>
+                        <button onclick="openChatModal()" class="btn btn-chat-custom" style="flex: 1; justify-content: center;">
+                            <i class="fa-solid fa-comments"></i> Live Chat
+                        </button>
+                    </div>
                 </div>
 
-                <div style="margin-bottom: 20px;">
-                    <strong style="font-size: 12px; color: var(--adlai-green); text-transform: uppercase;">Email & Web:</strong>
-                    <p style="font-size: 13px;"><i class="fa-solid fa-envelope"></i> payedvheques2gmail.com</p>
-                    <p style="font-size: 13px;"><i class="fa-solid fa-globe"></i> www.adlaihospital.com</p>
-                </div>
+                <!-- Right Column: Interactive Inquiry Form -->
+                <div class="contact-form-wrapper">
+                    <h3>Send Us a Message</h3>
+                    <p>Have questions about our medical services or insurance coverage? Drop us a line below.</p>
 
-                <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-                    <a href="https://wa.me/233539847422" target="_blank" class="btn btn-whatsapp-custom">
-                        <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
-                    </a>
-                    <button onclick="openChatModal()" class="btn btn-chat-custom">
-                        <i class="fa-solid fa-comments"></i> Chat Direct
-                    </button>
+                    <div class="contact-success-msg" id="contactSuccessMsg">
+                        <i class="fa-solid fa-circle-check"></i> Thank you! Your message has been received successfully.
+                    </div>
+
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <label for="contactName"><i class="fa-solid fa-user"></i> Your Name</label>
+                            <input type="text" id="contactName" class="form-control" placeholder="e.g. Kofi Mensah" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmailPhone"><i class="fa-solid fa-address-book"></i> Phone Number or Email</label>
+                            <input type="text" id="contactEmailPhone" class="form-control" placeholder="e.g. 054 123 4567 or email@domain.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage"><i class="fa-solid fa-message"></i> Your Message / Inquiry</label>
+                            <textarea id="contactMessage" class="form-control" rows="4" placeholder="How can we assist you today?" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-green" style="width: 100%; justify-content: center; padding: 13px; font-size: 13px;">
+                            <i class="fa-solid fa-paper-plane"></i> Send Your Message
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -1928,15 +2300,12 @@
         <div class="container">
             <div class="footer-top-cta">
                 <div class="footer-cta-text">
-                    <h3>Need Immediate Medical Assistance?</h3>
-                    <p>Our consultation and support lines are open to serve your family.</p>
+                    <h3>Need Immediate Medical Assistance in Kasoa?</h3>
+                    <p>Our consultation and emergency lines are open to serve your family 24/7.</p>
                 </div>
                 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    <a href="https://wa.me/233539847422" target="_blank" class="btn btn-whatsapp-custom">
-                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                    </a>
-                    <a href="tel:0544293468" class="btn btn-green">
-                        <i class="fa-solid fa-phone"></i> Call 054 429 3468
+                    <a href="tel:+23356068240" class="btn btn-green">
+                        <i class="fa-solid fa-phone"></i> Call +233 56 068 240
                     </a>
                 </div>
             </div>
@@ -1950,7 +2319,7 @@
                             <span class="brand-sub">COMMUNITY HOSPITAL</span>
                         </div>
                     </a>
-                    <p>Quality Healthcare, Compassionate Service. Dedicated to offering high standard diagnostic, therapeutic, and preventive care for all families.</p>
+                    <p>Quality Healthcare, Compassionate Service in Kasoa, Central Region. Located opposite Benab Filling Station.</p>
                 </div>
 
                 <div class="footer-col">
@@ -1967,10 +2336,10 @@
                 <div class="footer-col">
                     <h4>Clinical Care</h4>
                     <ul>
-                        <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-angle-right"></i> Outpatient Consultation</a></li>
-                        <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-angle-right"></i> Diagnostic Laboratory</a></li>
-                        <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-angle-right"></i> Ultrasound Scan</a></li>
-                        <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-angle-right"></i> In-house Pharmacy</a></li>
+                        <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-angle-right"></i> Out Patient (General OPD)</a></li>
+                        <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-angle-right"></i> Emergency Services</a></li>
+                        <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-angle-right"></i> Maternity & ANC/PNC</a></li>
+                        <li><a href="#services" class="smooth-scroll-link"><i class="fa-solid fa-angle-right"></i> Laboratory & Scan</a></li>
                     </ul>
                 </div>
 
@@ -1979,7 +2348,7 @@
                     <ul class="footer-contact-list">
                         <li>
                             <i class="fa-solid fa-phone-volume"></i>
-                            <span>054 429 3468 / 050 992 5533</span>
+                            <span>+233 56 068 240</span>
                         </li>
                         <li>
                             <i class="fa-solid fa-envelope"></i>
@@ -1992,7 +2361,7 @@
 
         <div class="copyright-bar">
             <div class="container copyright-flex">
-                <div>Copyright © 2026 Adlai Community Hospital. All Rights Reserved.</div>
+                <div>Copyright © 2026 Adlai Community Hospital (Kasoa, Central Region). All Rights Reserved.</div>
                 <div style="display: flex; gap: 15px; font-size: 10.5px;">
                     <a href="#" style="color: #64748b;">Privacy Policy</a>
                     <a href="#" style="color: #64748b;">Terms of Service</a>
@@ -2046,19 +2415,28 @@
             }
         }
 
-        // Handle Appointment Form Submission Simulation
         function handleAppointmentSubmit(e) {
             e.preventDefault();
             const successMsg = document.getElementById('appointmentSuccessMsg');
             successMsg.style.display = 'block';
-            document.getElementById('appointmentForm').reset();
             
             setTimeout(() => {
+                document.getElementById('appointmentForm').reset();
                 successMsg.style.display = 'none';
-            }, 6000);
+            }, 2000);
         }
 
-        // Smooth Scroll & Grow Highlight Animation on Anchor Click
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const successMsg = document.getElementById('contactSuccessMsg');
+            successMsg.style.display = 'block';
+            
+            setTimeout(() => {
+                document.getElementById('contactForm').reset();
+                successMsg.style.display = 'none';
+            }, 2000);
+        }
+
         document.querySelectorAll('.smooth-scroll-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 const targetId = this.getAttribute('href');
@@ -2086,35 +2464,56 @@
             });
         });
 
-        // Hero Media Rotation Script
+        // Slow, Smooth Synchronized Hero Media & Text Rotation Configuration
         const slides = document.querySelectorAll('.hero-media-slide');
+        const heroContent = document.getElementById('heroContent');
+        const heroSinceTag = document.getElementById('heroSinceTag');
+        const heroTitle = document.getElementById('heroTitle');
+        const heroDesc = document.getElementById('heroDesc');
+
+        const heroContentData = [
+            {
+                since: "Kasoa, Central Region • 24/7 Care",
+                title: "Adlai’s Premier<br>Community Hospital",
+                desc: "Located at the Nurses Quarters, opposite Benab Filling Station in Kasoa. Delivering top-tier healthcare, compassionate service, and emergency medical support for Central Region families."
+            },
+            {
+                since: "Safe Delivery & Family Health",
+                title: "Dedicated Maternity<br>& Antenatal Care",
+                desc: "Providing safe deliveries, comprehensive antenatal (ANC), and postnatal care (PNC) with experienced midwives and compassionate support for mothers and newborns."
+            },
+            {
+                since: "Advanced Medical Technology",
+                title: "Precision Ultrasound<br>& Diagnostics Lab",
+                desc: "Equipped with advanced ultrasound scan imaging and automated laboratory testing to ensure fast, accurate diagnoses for effective medical treatments."
+            },
+            {
+                since: "State-of-the-Art Infrastructure",
+                title: "World-Class Facility<br>& 24/7 Emergency Care",
+                desc: "Modern wards, fully stocked pharmacy, and responsive trauma care teams ready around the clock to protect your health and well-being."
+            }
+        ];
+
         let currentSlideIndex = 0;
 
-        window.addEventListener('DOMContentLoaded', () => {
-            if (slides[currentSlideIndex].tagName === 'VIDEO') {
-                slides[currentSlideIndex].currentTime = 0;
-                slides[currentSlideIndex].play().catch(e => console.log("Autoplay prevented:", e));
-            }
-        });
-
         function rotateHeroMedia() {
-            slides[currentSlideIndex].classList.remove('active');
-            
-            if (slides[currentSlideIndex].tagName === 'VIDEO') {
-                slides[currentSlideIndex].pause();
-                slides[currentSlideIndex].currentTime = 0;
-            }
+            heroContent.classList.add('fade-out');
 
-            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-            slides[currentSlideIndex].classList.add('active');
+            setTimeout(() => {
+                slides[currentSlideIndex].classList.remove('active');
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                slides[currentSlideIndex].classList.add('active');
 
-            if (slides[currentSlideIndex].tagName === 'VIDEO') {
-                slides[currentSlideIndex].currentTime = 0;
-                slides[currentSlideIndex].play().catch(e => console.log("Autoplay prevented:", e));
-            }
+                const data = heroContentData[currentSlideIndex];
+                heroSinceTag.textContent = data.since;
+                heroTitle.innerHTML = data.title;
+                heroDesc.textContent = data.desc;
+
+                heroContent.classList.remove('fade-out');
+            }, 600);
         }
 
-        setInterval(rotateHeroMedia, 4000);
+        setInterval(rotateHeroMedia, 7500);
     </script>
 </body>
 </html>
